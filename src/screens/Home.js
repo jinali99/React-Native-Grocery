@@ -4,10 +4,12 @@ import Header from '../components/common/header/Header';
 
 const Home = () => {
   return (
-    <View>
+    <>
       <Header showCart showSearch showWishlist />
-      <Text>Home</Text>
-    </View>
+      <View style={{justifyContent: 'center', flex: 1, alignItems: 'center'}}>
+        <Text>Home</Text>
+      </View>
+    </>
   );
 };
 
