@@ -71,7 +71,9 @@ const Header = ({
           </Pressable>
         )}
         {showWishlist && (
-          <Pressable style={styles.rightIcons}>
+          <Pressable
+            style={styles.rightIcons}
+            onPress={() => navigation.navigate(screens.WISHLIST)}>
             <Wishlist height={iconSize} width={iconSize} />
           </Pressable>
         )}

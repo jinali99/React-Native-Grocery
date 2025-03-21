@@ -20,8 +20,12 @@ import screens from '../../utils/screens';
 
 //color
 import {colors} from '../../theme/colors';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Wishlist from '../../screens/Wishlist';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
 const options = {
   headerShown: false,
 };

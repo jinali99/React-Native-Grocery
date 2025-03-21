@@ -1,6 +1,7 @@
 export const colors = {
   primary: '#FFFFFF', // white
   black: '#000000',
+  gray0: '#f4f4f4',
   gray1: '#D3D3D3', // Light gray
   gray2: '#808080', // Gray
   gray3: '#696969', // Dim gray
