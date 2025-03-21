@@ -1,3 +1,14 @@
+import Apple from '../../assets/images/apple.png';
+import Banana from '../../assets/images/banana.png';
+import Grapes from '../../assets/images/grapes.png';
+import Mango from '../../assets/images/mango.png';
+import Orange from '../../assets/images/orange.png';
+import Pinapple from '../../assets/images/pinapple.png';
+import Kiwi from '../../assets/images/kiwi.png';
+import Strawberry from '../../assets/images/strawberry.png';
+import Watermelon from '../../assets/images/watermalon.png';
+import Papaya from '../../assets/images/papaya.png';
+
 export const data = {
   categories: [
     {
@@ -7,7 +18,7 @@ export const data = {
         {
           id: 101,
           name: 'Apple',
-          image: 'apple.png',
+          image: Apple,
           price_range: {
             regular_price: {amount: '10.00', currency: 'SAR'},
             discount_price: {amount: '8.50', currency: 'SAR'},
@@ -18,7 +29,7 @@ export const data = {
         {
           id: 102,
           name: 'Banana',
-          image: 'banana.jpeg',
+          image: Banana,
           price_range: {
             regular_price: {amount: '6.00', currency: 'SAR'},
             discount_price: {amount: '5.00', currency: 'SAR'},
@@ -29,7 +40,7 @@ export const data = {
         {
           id: 103,
           name: 'Orange',
-          image: 'orange.png',
+          image: Orange,
           price_range: {
             regular_price: {amount: '9.00', currency: 'SAR'},
             discount_price: {amount: '7.80', currency: 'SAR'},
@@ -40,7 +51,7 @@ export const data = {
         {
           id: 104,
           name: 'Grapes',
-          image: 'grapes.jpeg',
+          image: Grapes,
           price_range: {
             regular_price: {amount: '15.00', currency: 'SAR'},
             discount_price: {amount: '13.50', currency: 'SAR'},
@@ -51,7 +62,7 @@ export const data = {
         {
           id: 105,
           name: 'Pineapple',
-          image: 'pineapple.png',
+          image: Pinapple,
           price_range: {
             regular_price: {amount: '12.00', currency: 'SAR'},
             discount_price: {amount: '10.50', currency: 'SAR'},
@@ -62,7 +73,7 @@ export const data = {
         {
           id: 106,
           name: 'Mango',
-          image: 'mango.jpeg',
+          image: Mango,
           price_range: {
             regular_price: {amount: '18.00', currency: 'SAR'},
             discount_price: {amount: '15.50', currency: 'SAR'},
@@ -73,7 +84,7 @@ export const data = {
         {
           id: 107,
           name: 'Strawberry',
-          image: 'strawberry.png',
+          image: Strawberry,
           price_range: {
             regular_price: {amount: '25.00', currency: 'SAR'},
             discount_price: {amount: '22.00', currency: 'SAR'},
@@ -84,7 +95,7 @@ export const data = {
         {
           id: 108,
           name: 'Watermelon',
-          image: 'watermelon.png',
+          image: Watermelon,
           price_range: {
             regular_price: {amount: '5.00', currency: 'SAR'},
             discount_price: {amount: '4.00', currency: 'SAR'},
@@ -95,7 +106,7 @@ export const data = {
         {
           id: 109,
           name: 'Papaya',
-          image: 'papaya.jpeg',
+          image: Papaya,
           price_range: {
             regular_price: {amount: '14.00', currency: 'SAR'},
             discount_price: {amount: '12.50', currency: 'SAR'},
@@ -106,7 +117,7 @@ export const data = {
         {
           id: 110,
           name: 'Kiwi',
-          image: 'kiwi.png',
+          image: Kiwi,
           price_range: {
             regular_price: {amount: '22.00', currency: 'SAR'},
             discount_price: {amount: '19.50', currency: 'SAR'},

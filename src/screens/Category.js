@@ -45,11 +45,10 @@ const styles = StyleSheet.create({
   },
   leftPanel: {
     flex: 1,
-    padding: responsiveModerateScale(10),
+    // padding: responsiveModerateScale(10),
     backgroundColor: colors.gray1,
   },
   rightPanel: {
     flex: 3,
-    // padding: responsiveModerateScale(10),
   },
 });

@@ -30,7 +30,7 @@ export default LeftPanel;
 
 const styles = StyleSheet.create({
   categoryItem: {
-    paddingVertical: responsiveModerateScale(5),
+    padding: responsiveModerateScale(5),
   },
   categoryText: {
     fontSize: responsiveModerateScale(16),
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     color: colors.black,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: responsiveModerateScale(10),
+    paddingVertical: responsiveModerateScale(7),
   },
   selectedCategory: {
     color: colors.primary,

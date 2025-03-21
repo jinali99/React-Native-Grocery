@@ -9,7 +9,7 @@ const RightPanel = ({products}) => {
       <FlatList
         data={products}
         renderItem={({item}) => <ProductCard item={item} />}
-        keyExtractor={item => item?.uid}
+        keyExtractor={item => item?.id}
         numColumns={2}
         initialNumToRender={20}
         maxToRenderPerBatch={20}

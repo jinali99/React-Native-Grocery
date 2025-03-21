@@ -3,11 +3,11 @@ import React from 'react';
 import {responsiveModerateScale, screenWidth} from '../../utils/app.utils';
 import {colors} from '../../theme/colors';
 import Price from '../common/price/Price';
+import FastImage from 'react-native-fast-image';
 
 // const itemWidth = screenWidth / 2 - 12;
-const imageWidth = responsiveModerateScale(200);
+const imageWidth = responsiveModerateScale(120);
 const ProductCard = ({item}) => {
-  console.log('item---->', item);
   return (
     <View style={styles.cardContainer} key={item.id}>
       <View
@@ -17,13 +17,12 @@ const ProductCard = ({item}) => {
           padding: responsiveModerateScale(5),
           position: 'relative',
         }}>
-        {/* <Pressable>
-          <CustomFastImage
+        <Pressable>
+          <FastImage
             style={{width: imageWidth, height: imageWidth}}
-            source={getImageParams(item)?.source}
+            source={item.image}
           />
-        </Pressable> */}
-
+        </Pressable>
         <Pressable>
           <Text style={styles.itemName} numberOfLines={2}>
             {item.name}
@@ -32,34 +31,6 @@ const ProductCard = ({item}) => {
         </Pressable>
 
         <Price priceRange={item?.price_range} />
-
-        {/* <View style={styles.btnContainer}>
-          {addWishlistLoader ? (
-            <ActivityIndicator />
-          ) : (
-            <Pressable
-              onPress={() =>
-                isLoggedIn ? handleWishlistToggle() : setLoginModalVisible(true)
-              }>
-              <IconButton
-                icon={() =>
-                  isInWishlist ? (
-                    <Filled_Heart width={20} height={20} />
-                  ) : (
-                    <Heart width={20} height={20} />
-                  )
-                }
-                style={styles.wishlistBtn}
-              />
-            </Pressable>
-          )}
-          <IconButton
-            icon={() => <Cart width={20} height={20} fill={'white'} />}
-            style={styles.cartBtn}
-            onPress={onAddToCartPress}
-            loading={addingToCart}
-          />
-        </View> */}
       </View>
     </View>
   );
@@ -74,7 +45,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginHorizontal: responsiveModerateScale(4),
     marginVertical: responsiveModerateScale(4),
-    width: 125,
+    width: responsiveModerateScale(134),
   },
   imageContainer: {
     height: imageWidth,
