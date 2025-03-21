@@ -4,6 +4,7 @@ import {responsiveModerateScale, screenWidth} from '../../utils/app.utils';
 import {colors} from '../../theme/colors';
 import Price from '../common/price/Price';
 import FastImage from 'react-native-fast-image';
+import Button from '../common/button/Button';
 
 // const itemWidth = screenWidth / 2 - 12;
 const imageWidth = responsiveModerateScale(120);
@@ -31,6 +32,7 @@ const ProductCard = ({item}) => {
         </Pressable>
 
         <Price priceRange={item?.price_range} />
+        <Button />
       </View>
     </View>
   );
