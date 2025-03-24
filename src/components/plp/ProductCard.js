@@ -1,30 +1,28 @@
 import {FlatList, Pressable, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {responsiveModerateScale, screenWidth} from '../../utils/app.utils';
 import {colors} from '../../theme/colors';
 import Price from '../common/price/Price';
 import FastImage from 'react-native-fast-image';
 import Button from '../common/button/Button';
+import {useNavigation} from '@react-navigation/native';
+import screens from '../../utils/screens';
+import QtyInput from '../common/qtyInput/QtyInput';
 
-// const itemWidth = screenWidth / 2 - 12;
 const imageWidth = responsiveModerateScale(120);
 const ProductCard = ({item}) => {
+  const navigation = useNavigation();
+  const [qty, setQty] = useState();
+  const handlePress = id => {
+    if (id == item.id) {
+    }
+  };
   return (
     <View style={styles.cardContainer} key={item.id}>
-      <View
-        style={{
-          height: 250,
-          backgroundColor: 'white',
-          padding: responsiveModerateScale(5),
-          position: 'relative',
-        }}>
-        <Pressable>
-          <FastImage
-            style={{width: imageWidth, height: imageWidth}}
-            source={item.image}
-          />
-        </Pressable>
-        <Pressable>
+      <View style={styles.card}>
+        <Pressable
+          onPress={() => navigation.navigate(screens.PRODUCT_DETAIL, {item})}>
+          <FastImage style={styles.imageContainer} source={item.image} />
           <Text style={styles.itemName} numberOfLines={2}>
             {item.name}
           </Text>
@@ -32,7 +30,12 @@ const ProductCard = ({item}) => {
         </Pressable>
 
         <Price priceRange={item?.price_range} />
-        <Button />
+
+        {qty > 0 ? (
+          <QtyInput quantity={qty} />
+        ) : (
+          <Button title="Add" onBtnPress={() => handlePress(item.id)} />
+        )}
       </View>
     </View>
   );
@@ -49,19 +52,19 @@ const styles = StyleSheet.create({
     marginVertical: responsiveModerateScale(4),
     width: responsiveModerateScale(134),
   },
+  card: {
+    height: responsiveModerateScale(250),
+    backgroundColor: colors.primary,
+    padding: responsiveModerateScale(5),
+    position: 'relative',
+  },
   imageContainer: {
     height: imageWidth,
-  },
-
-  itemBrand: {
-    fontSize: 11,
-    color: '#999999',
+    width: imageWidth,
   },
   itemName: {
     fontSize: 14,
     fontWeight: '400',
-    // paddingHorizontal: responsiveModerateScale(5),
-    // paddingVertical: responsiveModerateScale(5),
     textAlign: 'left',
   },
   rowHeaderView: {

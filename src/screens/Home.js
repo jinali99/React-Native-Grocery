@@ -1,9 +1,10 @@
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Header from '../components/common/header/Header';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {changeLanguage} from '../i18n';
 import {useTranslation} from 'react-i18next';
+import Button from '../components/common/button/Button';
 
 const Home = () => {
   const language = AsyncStorage.getItem('Language');

@@ -4,6 +4,7 @@ export default {
   CART: 'Cart',
   CATEGORY: 'Category',
   WISHLIST: 'Wishlist',
+  PRODUCT_DETAIL: 'ProductDetail',
 
   ACCOUNT: 'Account',
   PROFILE: 'Profile',
